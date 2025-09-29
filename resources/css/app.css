@@ -1,11 +1,33 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+:root{
+  --bg: #F3F1ED;          /* Основной фон страницы и секций; светлые блоки, «воздух» */
+  --surface: #F7F6F3;     /* Карточки/панели/дропдауны/модалки; чередование секций */
+  --text: #111111;        /* Основной текст: заголовки, абзацы, иконки на светлом */
+  --muted: #7B776F;       /* Второстепённый текст: подписи, метки времени, хинты */
+  --border: #E2DFDA;      /* Бордеры и разделители: карточки, инпуты, таблицы */
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+  --accent: #8D735D;      /* Главный акцент: CTA-кнопки, ссылки, цена/метки */
+  --accent-hover: #5B4636;/* Ховер/active для акцентных элементов; фокус-outline */
+
+  --neutral-1: #A4A29D;   /* Очень лёгкий нейтрал: placeholder, фон чипов/бейджей */
+  --neutral-2: #97938C;   /* Пассивные иконки, disabled-текст, вторичные кнопки */
+  --neutral-3: #736A5F;   /* Вторичные заголовки; нейтральные кнопки/чипы (текст) */
+  --neutral-4: #635F58;   /* Тёмные бордеры, декоративные линии, усиление контраста */
+  --neutral-5: #4F443B;   /* Hover к нейтральным элементам; акцентные иконки на светлом */
+  --neutral-6: #3C3933;   /* Тёмные секции (футер/герой-альт); текст сверху белый */
+  --deep: #2C201B;        /* Редкий глубокий акцент: оверлеи, важные штрихи/тени */
+}
+
+
+/* body{
+    @apply bg-gray-300 overflow-hidden m-0 p-0;
+} */
+
+.card-style{
+    @apply absolute w-[800px] h-[500px] bg-white cursor-pointer rounded-[20px] hover:scale-105 duration-300 shadow-lg overflow-hidden;
+}
+
+.shop-card{
+    box-shadow: #2C201B 0px 10px 20px 0px;
 }
