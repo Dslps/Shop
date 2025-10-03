@@ -7,9 +7,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Infinite Dynamic Grid</title>
 </head>
-<body>
+<body style="overflow: hidden; margin: 0; padding: 0; overscroll-behavior: none;">
 
-    <div id="grid-container" class="w-screen h-screen cursor-grab active:cursor-grabbing">
+    <div id="grid-container" class="w-screen h-screen cursor-grab active:cursor-grabbing" style="touch-action: none; user-select: none; -webkit-user-select: none;">
         
         <!-- Основной контейнер с наклоном -->
         <div id="grid-wrapper" 
@@ -353,7 +353,7 @@
             }
             
             checkAndExpandBoundaries() {
-                const buffer = 1.5;
+                const buffer = 2.5;
                 const viewWidth = window.innerWidth * buffer;
                 const viewHeight = window.innerHeight * buffer;
                 

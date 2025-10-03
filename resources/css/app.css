@@ -20,14 +20,11 @@
 }
 
 
-/* body{
-    @apply bg-gray-300 overflow-hidden m-0 p-0;
-} */
-
-.card-style{
-    @apply absolute w-[800px] h-[500px] bg-white cursor-pointer rounded-[20px] hover:scale-105 duration-300 shadow-lg overflow-hidden;
+body{
+    @apply m-0 p-0 text-[#222222];
 }
 
+
 .shop-card{
-    box-shadow: #2C201B 0px 10px 20px 0px;
+    box-shadow: #2c201b7a 0px 10px 20px 0px;
 }
